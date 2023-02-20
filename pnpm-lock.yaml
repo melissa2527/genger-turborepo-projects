@@ -4,9 +4,12 @@ importers:
 
   .:
     specifiers:
+      '@types/node': ^17.0.12
       eslint-config-custom: workspace:*
       prettier: ^2.8.4
       turbo: latest
+    dependencies:
+      '@types/node': 17.0.45
     devDependencies:
       eslint-config-custom: link:packages/eslint-config-custom
       prettier: 2.8.4
@@ -577,7 +580,6 @@ packages:
 
   /@types/node/17.0.45:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
-    dev: true
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
