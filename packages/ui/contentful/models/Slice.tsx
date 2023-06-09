@@ -1,19 +1,19 @@
 import styled from 'styled-components'
 
-export type size = 's' | 'm' | 'l';
+export type Margin = 's' | 'm' | 'l';
 
 interface SliceProps {
-    marginTop: size;
-    marginBottom: size;
+    marginTop: Margin;
+    marginBottom: Margin;
     children: React.ReactNode;
 }
 
-const Wrapper = styled.div<{ marginTop: size, marginBottom: size}>`
+const Wrapper = styled.div<{ marginTop: Margin, marginBottom: Margin}>`
     margin-top: ${props => props.marginTop === 'l' ? '84px' : props.marginTop === 'm' ? '64px' : '32px'};
     margin-bottom: ${props => props.marginBottom === 'l' ? '84px' : props.marginBottom === 'm' ? '64px' : '32px'};
 `
 
-const Testimonial = ({marginTop, marginBottom, children}: SliceProps) => {
+const Slice = ({marginTop, marginBottom, children}: SliceProps) => {
     return (
         <Wrapper marginBottom={marginBottom} marginTop={marginTop}>
             {children}
@@ -21,4 +21,4 @@ const Testimonial = ({marginTop, marginBottom, children}: SliceProps) => {
     )
 }
 
-export default Testimonial;
+export default Slice;
